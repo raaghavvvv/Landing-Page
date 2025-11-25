@@ -44,7 +44,7 @@ export default function LandingPage() {
           <p className="hero-tag">A full stack developer</p>
           <h1>Welcome to my world</h1>
           <p className="hero-subtitle">
-          A place where I push all the cool stuff I build. Sometimes I code and sometimes I vibe-code XD.
+          A place where I push all the cool stuff I build. I code and sometimes I vibe-code XD.
           </p>
         </section>
         <section id="about" className="panel">

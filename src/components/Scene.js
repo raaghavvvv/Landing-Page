@@ -64,9 +64,9 @@ export default function Scene() {
           bevelSize={0.01}
           bevelSegments={3}
           curveSegments={8}
-          position={[-0.5, -0.2, 0]}
+          position={[0.05, -0.2, 0]}
         >
-          Welcome to my website. Grab the dart and aim to explore.
+          Look what I built! Grab the dart and aim to explore.
           <meshStandardMaterial 
             metalness={0.9} 
             roughness={0.5} 

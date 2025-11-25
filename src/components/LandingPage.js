@@ -11,9 +11,9 @@ export default function LandingPage() {
       <header className="banner">
         <div className="banner-content">
           <div className="banner-canvas">
-            <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
+            <Canvas shadows camera={{ position: [0, 0, 5], fov: 50 }}>
               <ambientLight intensity={0.4} />
-              <directionalLight position={[5, 5, 5]} intensity={1.2} />
+              <directionalLight position={[5, 5, 5]} intensity={1.2} castShadow />
               <directionalLight position={[-5, 3, -5]} intensity={0.5} color="#ff6b9d" />
               <pointLight position={[0, -2, 4]} intensity={0.8} color="#4fc3f7" />
               <Suspense fallback={null}>

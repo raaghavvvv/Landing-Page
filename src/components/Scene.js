@@ -32,6 +32,26 @@ export default function Scene() {
   return (
     <Center>
       <group ref={textRef}>
+        {/* Shadow layer for main title */}
+        <Text3D
+          font="/fonts/optimer_regular.typeface.json"
+          size={0.6}
+          height={0.15}
+          bevelEnabled
+          bevelThickness={0.015}
+          bevelSize={0.02}
+          bevelSegments={5}
+          curveSegments={12}
+          position={[0.02, 0.27, -0.02]}
+        >
+          Hola Friend! I'M RAGHAV
+          <meshStandardMaterial 
+            color="#000000"
+            opacity={0.6}
+            transparent
+          />
+        </Text3D>
+        
         {/* Main title */}
         <Text3D
           font="/fonts/optimer_regular.typeface.json"
@@ -43,6 +63,7 @@ export default function Scene() {
           bevelSegments={5}
           curveSegments={12}
           position={[0, 0.3, 0]}
+          castShadow
         >
           Hola Friend! I'M RAGHAV
           <meshStandardMaterial 

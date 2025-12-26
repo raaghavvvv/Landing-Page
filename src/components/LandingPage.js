@@ -50,7 +50,9 @@ export default function LandingPage() {
         <section id="about" className="panel">
           <h3>About</h3>
           <p>
-            Loading...
+            I am Raghav, a full stack developer. I love to code, I love to see things moving and working, This site is a showcase of some of the cool/not-cool stuff I have build or maybe I just wanted to build a site from scratch and put everything online and see how it goes.
+            <br />
+            I would say it's going pretty well  if you are here *wink wink*.
           </p>
         </section>
         <section id="work" className="panel">

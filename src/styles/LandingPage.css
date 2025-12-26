@@ -499,7 +499,16 @@ html, body, #root {
 
 .panel p {
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1.5em;
+}
+
+.panel p:last-child {
+  margin-bottom: 0;
+}
+
+.panel p:last-of-type {
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -532,7 +541,80 @@ html, body, #root {
 }
 
 .panel a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+}
+
+/* Contact Section */
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 20px;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(255, 107, 157, 0.03) 100%);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(255, 107, 157, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.contact-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 212, 255, 0.4);
+  box-shadow: 
+    0 8px 24px rgba(0, 212, 255, 0.15),
+    0 0 0 1px rgba(0, 212, 255, 0.1);
+}
+
+.contact-item:hover::before {
+  opacity: 1;
+}
+
+.contact-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.contact-value {
+  font-size: 16px;
+  color: #ffd166;
+  font-weight: 400;
+  text-align: center;
+  word-break: break-word;
+  transition: color 0.3s ease;
+}
+
+.contact-item:hover .contact-value {
+  color: #00d4ff;
 }
 
 @media (max-width: 768px) {
@@ -564,5 +646,19 @@ html, body, #root {
 
   .hero h1 {
     font-size: clamp(42px, 12vw, 64px);
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .contact-item {
+    padding: 20px 16px;
+  }
+
+  .contact-value {
+    font-size: 15px;
   }
 }
